@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Webinar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <link rel="stylesheet" href="liveweb.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-color: rgb(241, 230, 252);">
+    <div class="container">
+        <img src="img/webform4.jpg" alt="Webinar Banner" class="img-fluid my-3 mx-auto d-block rounded" style="width: 700px;height: 300px;">
+        <div class="card mx-auto" style="max-width: 700px;">
+            <div class="card-body">
+                <h1>Reserve Your Seat for UPSC Conclave. Only 100 Slots Available.</h1>
+                <p>Zoom Link will pop up after form submission</p>
+                <p>Post workshop, we will share a personalized PDF study plan tailored to your profile, learning style, previous attempts, and other relevant factors.</p>
+            </div>
+        </div>
+        <form action="webinarRegister" method="post">
+            <div class="card mx-auto my-3" style="max-width: 700px;">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="name" name="Uname" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mob" class="form-label">Mobile:</label>
+                        <input type="text" class="form-control" id="mob" name="Mobile" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">When are you planning to attempt UPSC CSE?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="attemptYear" id="year2022" value="2022" required>
+                            <label class="form-check-label" for="year2022">2022</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="attemptYear" id="year2023" value="2023">
+                            <label class="form-check-label" for="year2023">2023</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="attemptYear" id="year2024" value="2024">
+                            <label class="form-check-label" for="year2024">2024</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="attemptYear" id="year2025" value="2025 or later">
+                            <label class="form-check-label" for="year2025">2025 or later</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Which Exam Are You Preparing For?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exam" id="examMPSC" value="MPSC" required>
+                            <label class="form-check-label" for="examMPSC">MPSC</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exam" id="examUPSC" value="UPSC">
+                            <label class="form-check-label" for="examUPSC">UPSC</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="exam" id="examBoth" value="Both">
+                            <label class="form-check-label" for="examBoth">MPSC & UPSC Both</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Which state are you from?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="state" id="stateMaharashtra" value="Maharashtra" required>
+                            <label class="form-check-label" for="stateMaharashtra">Maharashtra</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="state" id="stateRest" value="Rest of India">
+                            <label class="form-check-label" for="stateRest">Rest of India</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="issue" class="form-label">Specific issue that you would want to discuss.</label>
+                        <textarea class="form-control" id="issue" name="issue" rows="3" required></textarea>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrackIt Academy - PG Mess Timetable</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus {
+            border-color: #007bff;
+        }
+        button[type="submit"] {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container a button {
+            padding: 12px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .button-container a button:hover {
+            background-color: #c82333;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const days = document.getElementById('Days').value;
+            const breakfast = document.getElementById('Breakfast').value;
+            const lunch = document.getElementById('Lunch').value;
+            const dinner = document.getElementById('Dinner').value;
+
+            if (!days || !breakfast || !lunch || !dinner) {
+                alert('All fields are required.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>PG Mess Timetable</h1>
+        <form action="pgTimetableMess" method="post" onsubmit="return validateForm()">
+            <label for="Days">Day</label>
+            <input type="text" name="Days" id="Days" placeholder="Enter day" required>
+            <label for="Breakfast">Breakfast</label>
+            <input type="text" name="Breakfast" id="Breakfast" placeholder="Enter breakfast" required>
+            <label for="Lunch">Lunch</label>
+            <input type="text" name="Lunch" id="Lunch" placeholder="Enter lunch" required>
+            <label for="Dinner">Dinner</label>
+            <input type="text" name="Dinner" id="Dinner" placeholder="Enter dinner" required>
+            <button type="submit">Submit</button>
+        </form>
+        <br><br>
+        <div class="button-container">
+            <a href="admin_panel.html"><button>Back</button></a>
+        </div>
+    </div>
+</body>
+</html>
